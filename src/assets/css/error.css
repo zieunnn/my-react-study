@@ -1,0 +1,4 @@
+#error-page{padding:3rem 1rem;text-align:center;font-size:1.75em}
+#error-page h1{font-size:2.5rem;color:#fff}
+#error-page h1 + p{padding:1rem 0}
+#error-page button{margin-top:2rem}
