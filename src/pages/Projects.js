@@ -3,13 +3,14 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ProjectModal from "../components/ProjectModal";
 import { useLocation, useNavigate } from "react-router-dom";
+import Modal from "react-bootstrap/Modal";
 
 const Projects = () => {
   const [projectData, setProjectData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 3;
+  const projectsPerPage = 6;
   const navigate = useNavigate();
   const location = useLocation();
   const projectListRef = useRef(null);
@@ -37,13 +38,23 @@ const Projects = () => {
     fetchData();
   }, []);
 
+  const [show, setShow] = useState(false);
+
   const openModal = (project) => {
+    setShow(true);
     navigate(`/Projects/${project.id}`);
     setSelectedProjectId(project.id);
   };
 
   const closeModal = () => {
+    setShow(false);
     setSelectedProjectId(null);
+  };
+
+  // 모달이 닫힐 때 뒤로 가기
+  const handleModalHide = () => {
+    closeModal();
+    navigate(-1);
   };
 
   useEffect(() => {
@@ -62,6 +73,7 @@ const Projects = () => {
   useEffect(() => {
     // URL이 '/Projects/'로 시작하면서 선택된 프로젝트 ID가 있는 경우 모달 열기
     if (location.pathname.startsWith("/Projects/") && selectedProjectId) {
+      setShow(true);
     }
   }, [location.pathname, selectedProjectId]);
 
@@ -127,12 +139,14 @@ const Projects = () => {
           )}
 
           {selectedProjectId && (
-            <ProjectModal
-              project={projectData.find(
-                (project) => project.id === selectedProjectId
-              )}
-              onClose={closeModal}
-            />
+            <Modal show={show} onHide={handleModalHide}>
+              <ProjectModal
+                project={projectData.find(
+                  (project) => project.id === selectedProjectId
+                )}
+                onClose={closeModal}
+              />
+            </Modal>
           )}
 
           <div className="pagination">
