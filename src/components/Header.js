@@ -23,8 +23,18 @@ const Header = () => {
       <nav>
         <ul>
           <li>
+            <NavLink to="/Blog" activeclassname="active-link">
+              블로그
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/Projects" activeclassname="active-link">
               포트폴리오
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/Connect" activeclassname="active-link">
+              연락주세요
             </NavLink>
           </li>
           <li>
