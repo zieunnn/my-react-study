@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import "../assets/css/home.css";
 
 const Home = () => {
   const itsmeRef = useRef(null);
@@ -280,10 +279,12 @@ const Home = () => {
             <span className="svg">
               <svg className="over" viewBox="0 0 100 100">
                 <path
+                  fill="currentColor"
                   className="border"
                   d="M50 10 A 40 40 0 1 0 50 90 A 40 40 0 1 0 50 10"
                 />
                 <path
+                  fill="currentColor"
                   className="progress"
                   d="M50 10 A 40 40 0 1 0 50 90 A 40 40 0 1 0 50 10"
                 />
@@ -293,7 +294,10 @@ const Home = () => {
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path d="M15.101 5.5V23.1094L9.40108 17.4095L8.14807 18.6619L15.9862 26.5L23.852 18.6342L22.5996 17.3817L16.8725 23.1094V5.5H15.101Z"></path>
+                <path
+                  fill="currentColor"
+                  d="M15.101 5.5V23.1094L9.40108 17.4095L8.14807 18.6619L15.9862 26.5L23.852 18.6342L22.5996 17.3817L16.8725 23.1094V5.5H15.101Z"
+                ></path>
               </svg>
             </span>
             <span className="text">더보기</span>
