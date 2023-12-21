@@ -4,8 +4,15 @@ import Footer from "../components/Footer";
 import ProjectModal from "../components/ProjectModal";
 import { useLocation, useNavigate } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
+import { useGlobalState } from "../components/GlobalState";
 
 const Projects = () => {
+  const { setPageName } = useGlobalState();
+
+  useEffect(() => {
+    setPageName("- 포트폴리오");
+  }, [setPageName]);
+
   const [projectData, setProjectData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

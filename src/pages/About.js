@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useGlobalState } from "../components/GlobalState";
 
 const About = () => {
+  const { setPageName } = useGlobalState();
+
+  useEffect(() => {
+    setPageName("- 저는요");
+  }, [setPageName]);
+
   return (
     <>
       <Header />

@@ -1,8 +1,15 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useGlobalState } from "../components/GlobalState";
 
 const Home = () => {
+  const { setPageName } = useGlobalState();
+
+  useEffect(() => {
+    setPageName("");
+  }, [setPageName]);
+
   const itsmeRef = useRef(null);
   const itsmeScroll = () => {
     if (itsmeRef.current) {
