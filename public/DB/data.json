@@ -3,10 +3,11 @@
     "id": 0,
     "name": "현대수산맛김",
     "imgsrc": "https://1.bp.blogspot.com/-Ta7Dsg7i6zY/YL9qolLL2CI/AAAAAAAA6NM/G4hlqLXB6ZEFUsaqcg5ozR98EDPEbb7sgCLcBGAsYHQ/s1200/200906.png",
-    "shots": ["http://4.bp.blogspot.com/-YaWI5ScjLAs/U36007ppZLI/AAAAAAAABqE/e8ltW9oGTx4/w800/01.png","http://4.bp.blogspot.com/-m2JBQwzjX1g/U361N7kFL_I/AAAAAAAABqQ/zYQq2AYs-wQ/w800/02.png","http://4.bp.blogspot.com/-s-QLu0lG99M/U361N4z2TII/AAAAAAAABqU/rrWbh20FgEk/w800/03.png"],
+    "shots":["http://4.bp.blogspot.com/-YaWI5ScjLAs/U36007ppZLI/AAAAAAAABqE/e8ltW9oGTx4/w800/01.png","http://4.bp.blogspot.com/-m2JBQwzjX1g/U361N7kFL_I/AAAAAAAABqQ/zYQq2AYs-wQ/w800/02.png","http://4.bp.blogspot.com/-s-QLu0lG99M/U361N4z2TII/AAAAAAAABqU/rrWbh20FgEk/w800/03.png"],
     "date": "2009년 06월",
     "role": ["디자인", "퍼블리싱"],
-    "desc": "디자인 및 HTML, CSS, JavaScript로 코딩 작업을 진행했습니다."
+    "desc": "디자인 및 HTML, CSS, JavaScript로 코딩 작업을 진행했습니다.",
+    "visible": false
   },
   {
     "id": 1,
@@ -22,7 +23,11 @@
     "id": 2,
     "name": "구매대행 쇼핑몰 제작",
     "imgsrc": "https://1.bp.blogspot.com/-QNLaJN3_SXo/YMTLKX3CplI/AAAAAAAA6N0/swtrQ6-l_M0jV5W63X_A8G-RsXjIRWJmwCLcBGAsYHQ/w800/201212.jpg",
-    "shots": ["http://2.bp.blogspot.com/-fgLxZiZrpdg/VVZTaqJFqVI/AAAAAAAAE4Q/oYmbQz97l0U/w700/01.png","http://2.bp.blogspot.com/-3pgAPGWiAZg/VVZUtR1_b5I/AAAAAAAAE4c/Bj9nfJl562g/s0/01.png","http://4.bp.blogspot.com/-Mp-lpEAnPkI/VaPWSO-9HOI/AAAAAAAAF5c/o7LVl9wIocw/w700/01.png"],
+    "shots": [
+      "http://4.bp.blogspot.com/-Mp-lpEAnPkI/VaPWSO-9HOI/AAAAAAAAF5c/o7LVl9wIocw/w700/01.png",
+      "http://2.bp.blogspot.com/-fgLxZiZrpdg/VVZTaqJFqVI/AAAAAAAAE4Q/oYmbQz97l0U/w700/01.png",
+      "http://2.bp.blogspot.com/-3pgAPGWiAZg/VVZUtR1_b5I/AAAAAAAAE4c/Bj9nfJl562g/s0/01.png"
+    ],
     "date": "2012년 12월",
     "role": ["디자인", "퍼블리싱"],
     "hash": "웹접근성",

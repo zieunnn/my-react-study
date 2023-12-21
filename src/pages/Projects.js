@@ -38,10 +38,12 @@ const Projects = () => {
     fetchData();
   }, []);
 
+  const [fullscreen, setFullscreen] = useState(true);
   const [show, setShow] = useState(false);
 
-  const openModal = (project) => {
+  const openModal = (project, breakpoint) => {
     setShow(true);
+    setFullscreen(breakpoint);
     navigate(`/Projects/${project.id}`);
     setSelectedProjectId(project.id);
   };
@@ -121,7 +123,7 @@ const Projects = () => {
                 >
                   <button
                     className="subject"
-                    onClick={() => openModal(project)}
+                    onClick={() => openModal(project, true)}
                   >
                     {project.name}
                   </button>
@@ -139,12 +141,12 @@ const Projects = () => {
           )}
 
           {selectedProjectId && (
-            <Modal show={show} onHide={handleModalHide}>
+            <Modal show={show} fullscreen={fullscreen} onHide={handleModalHide}>
               <ProjectModal
                 project={projectData.find(
                   (project) => project.id === selectedProjectId
                 )}
-                onClose={closeModal}
+                onClose={handleModalHide}
               />
             </Modal>
           )}

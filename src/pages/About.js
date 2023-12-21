@@ -95,6 +95,15 @@ const About = () => {
                   </li>
                   <li>
                     <a
+                      href="https://react-icons.github.io/"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <span>react icons</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
                       href="https://fontawesome.com/"
                       target="_blank"
                       rel="noreferrer noopener"
@@ -173,6 +182,12 @@ const About = () => {
                       </li>
                       <li>
                         <span>plugin</span> <span>Live Sass Compiler</span>
+                      </li>
+                      <li>
+                        <span>plugin</span>{" "}
+                        <span>
+                          ES7 React/Redux/GraphQL/React-Native snippets
+                        </span>
                       </li>
                     </ul>
                   </li>

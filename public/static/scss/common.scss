@@ -27,14 +27,14 @@ button{touch-action:pan-y}
 button,
 a{position:relative;display:inline-block;padding-top:.25rem;padding-bottom:.25rem;color:var(--bs-body-color);text-decoration:none}
 a:hover{color:var(--bs-emphasis-color)}
-a::before{position:absolute;content:"";bottom:0;width:0;height:2px;background:var(--bs-emphasis-color);transition:.2s}
-a:hover::before{width:100%}
 
 h1,h2,h3,h4,h5,h6{color:var(--bs-emphasis-color)}
 code{font-weight:600;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}
 
 // layout
 .header{display:flex;align-items:center;justify-content:space-between;max-width:1600px;margin:0 auto;padding:2rem 5%;color:var(--bs-emphasis-color)}
+.header a::before{position:absolute;content:"";bottom:0;width:0;height:2px;background:var(--bs-emphasis-color);transition:.2s}
+.header a:hover::before{width:100%}
 .header h1{margin:0;font-size:1.5em;font-weight:500}
 .header h1 a{color:var(--bs-emphasis-color)}
 .header nav li{display:inline-block;padding-right:2rem}
@@ -78,8 +78,8 @@ code{font-weight:600;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consol
 .sub-title{padding-bottom:2rem}
 
 //project
-@for $i from 1 through 5 {
-  .grid-#{$i} {
+@for $i from 1 through 5{
+  .grid-#{$i}{
     grid-template-columns:repeat(#{$i}, 1fr);
     &.gap1{gap:1.5rem}
   }
@@ -101,10 +101,10 @@ code{font-weight:600;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consol
   @media screen and (max-width:768px){
     grid-template-columns:repeat(1, 1fr)
   }
-
-  .roles{margin:0 -.25rem;padding:2rem 0;font-size:.9em}
-  .roles span{display:inline-block;margin:.25rem;padding:.75rem 1.25rem;background:var(--bs-border-color-translucent);border-radius:2rem}
+  .roles{padding:2rem 0}
 }
+.roles{margin:0 -.25rem;font-size:.9em}
+.roles span{display:inline-block;margin:.25rem;padding:.75rem 1.25rem;background:var(--bs-border-color-translucent);border-radius:2rem}
 
 // pagination
 .pagination{justify-content:center;padding:3rem 0 0}
@@ -154,3 +154,40 @@ code{font-weight:600;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consol
 .info-list.link li ul li{position:relative;padding-left:.75rem;font-size:.9em;opacity:.85}
 .info-list.link li ul li::before{position:absolute;content:"";top:13px;left:0;width:3px;height:3px;background:var(--bs-body-color)}
 .info-list.link li ul li span:first-child{display:inline-block;padding:.15rem .35rem;font-size:.85em;background:var(--bs-secondary-bg);border-radius:.5rem}
+
+.shots.modal-open,
+.shots .modal{padding-right:0!important}
+.shots .modal-dialog{width:100%;position:relative;padding-top:3.35rem}
+.shots .modal-content{position:static}
+.shots .project-modal{height:100%;background:var(--bs-body-bg)}
+.shots .project-modal .close{position:absolute;top:.4rem;right:.5rem;width:40px;height:40px;font-size:1.2em;color:var(--bs-emphasis-color)}
+.shots .project-content{background:var(--bs-body-bg)}
+
+.project-content{padding:4rem 0}
+.project-content h2{padding:0 0 1rem}
+.project-content .roles{padding:1rem 0}
+.project-shots{padding:2rem 0}
+.project-shots button{padding:0}
+.project-shots ul:after{content:"";display:block;clear:both}
+.project-shots li{float:left;width:30%;padding-bottom:1rem}
+.project-shots li:first-child{width:70%;padding-right:1rem}
+@media (max-width:1024px){
+  .project-shots li{width:50%}
+  .project-shots li:first-child{width:100%;padding-right:0}
+  .project-shots li:nth-child(2){padding-right:.5rem}
+  .project-shots li:nth-child(3){padding-left:.5rem}
+}
+@media (max-width:768px){
+  .project-shots li{width:100%}
+  .project-shots li:nth-child(2){padding-right:0}
+  .project-shots li:nth-child(3){padding-left:0}
+}
+
+.shots .carousel{height:100%}
+.shots .carousel-inner{text-align:center}
+.shots .carousel-control-prev,
+.shots .carousel-control-next{position:fixed}
+.shots .lightbox .modal-dialog{padding-top:0;background:var(--bs-body-bg)}
+.shots .lightbox .modal-footer{position:absolute;right:17px;border-top:0;z-index:1}
+.shots .lightbox .modal-footer button{padding:0 .5rem;font-size:1.75em;color:var(--bs-emphasis-color)}
+.shots .carousel-indicators{position:fixed}
